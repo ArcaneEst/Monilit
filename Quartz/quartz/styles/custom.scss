@@ -1,7 +1,25 @@
-/* Превращаем маркированные списки bases-page в нумерованные */
-.bases-page ul, 
-.bases-view ul,
-.bases-list ul {
-  list-style-type: decimal !important;
-  padding-left: 1.5rem;
+/* Нумеруем элементы bases-page через CSS-счётчик */
+.bases-page {
+  counter-reset: spell-item;
+}
+
+.bases-page .bases-list-item {
+  counter-increment: spell-item;
+}
+
+/* Прячем дефис "-" в span.list-bullet */
+.bases-page .list-bullet {
+  visibility: hidden;
+  position: relative;
+  display: inline-block;
+  min-width: 1.6rem;
+}
+
+/* Рисуем цифру поверх скрытого дефиса */
+.bases-page .list-bullet::after {
+  content: counter(spell-item) ".";
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  top: 0;
 }

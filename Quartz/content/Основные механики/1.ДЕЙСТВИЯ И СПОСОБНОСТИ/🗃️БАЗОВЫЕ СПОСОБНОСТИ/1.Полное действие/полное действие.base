@@ -6,3 +6,5 @@ views:
   - type: list
     name: Нумерованный список
     markers: bullet
+    order:
+      - file.name

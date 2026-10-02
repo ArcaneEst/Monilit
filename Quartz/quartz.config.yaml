@@ -258,6 +258,12 @@ plugins:
       position: afterBody
       priority: 50
       display: all
+  - source: github:quartz-community/bases-page
+    enabled: true
+    options:
+      defaultViewType: table
+      linkResolution: shortest
+    order: 50
 layout:
   groups:
     toolbar:

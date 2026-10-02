@@ -1,3 +1,7 @@
-@use "./variables.scss" as *;
-
-// put your custom CSS here!
+/* Превращаем маркированные списки bases-page в нумерованные */
+.bases-page ul, 
+.bases-view ul,
+.bases-list ul {
+  list-style-type: decimal !important;
+  padding-left: 1.5rem;
+}
